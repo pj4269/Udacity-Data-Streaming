@@ -63,7 +63,7 @@ class Producer:
         """Use this function to get the key for Kafka Events"""
         return int(round(time.time() * 1000))
 
-        @staticmethod
+    @staticmethod
     def check_topic_exists(client, topic_name):
         topic_metadata = client.list_topics()
         topics = topic_metadata.topics
